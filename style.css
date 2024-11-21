@@ -1,3 +1,13 @@
+:root {
+    --primary-light: #ddd;
+    --primary-dark: #222831;
+    --secondary-dark: #393e46;
+    --secondary-dark-hover: #4a4f57;
+    --secondary-dark-active: #5b5f68;
+    --header: #111720;
+    --primary-yellow: #fac650;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -7,42 +17,66 @@
 body{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    flex-direction: column;
     height: 100vh;
-    background-color: beige;
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
 }
 
-.container{
-    width: 450px;
-    height: 550px;
-    border-radius: 10%;
-    background-color: white;
+header{
+    background-color: var(--header);
+    width: 100%;
+    text-align: center;
+    padding: 40px;
+    font-size: 1.5rem;
+    color: var(--primary-yellow);
+}
+
+main{
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding-top: 50px;
+    gap: 30px;
 }
 
-h1{
-    margin: 20px 0 10px 0;
-    color: darkkhaki;
+main h3{
+    font-size: 2.5rem;
+}
+
+.score-board{
+    display: flex;
+    gap: 30px;
+}
+
+.player, .computer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 2rem;
+}
+
+#score-player, #score-computer{
+    font-size: 5rem;
+    color: var(--primary-yellow);
 }
 
 .btn-container{
     width: 100%;
-    margin: 10px 0 50px 0;
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: space-between;
 }
 
-button{
-    width: 25%;
-    font-size: 1.3rem;
-    padding: 5px;
+.btn-container button{
+    padding: 10px 25px;
+    background-color: var(--secondary-dark);
     border: none;
-    border-radius: 20px;
-    background-color: white;
-    color: darkkhaki;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
 }
