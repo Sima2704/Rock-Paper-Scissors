@@ -34,6 +34,7 @@ header{
 }
 
 main{
+    width: 100%;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -69,7 +70,8 @@ main h3{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 7%;
 }
 
 .btn-container button{
@@ -77,6 +79,56 @@ main h3{
     background-color: var(--secondary-dark);
     border: none;
     color: white;
-    font-size: 1rem;
+    font-size: 1.5rem;
     cursor: pointer;
+    border-radius: 10px;
+}
+
+button:hover, #resetBtn:hover{
+    background-color: var(--secondary-dark-hover);
+}
+
+.gameover{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.gameover-content{
+    text-align: center;
+    margin: 10% auto;
+    width: 350px;
+    border-radius: 10px;
+    padding: 2rem 3rem;
+    background-color: var(--primary-dark);
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0,2), 0 7px 20px 0 rgba(0, 0, 0, 0,17);
+    animation-name: modal;
+    animation-duration: 1s;
+}
+
+.text{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+.end-score{
+    font-size: 2rem;
+}
+
+#resetBtn{
+    margin-top: 1.2rem;
+    text-align: center;
+    border: none;
+    background-color: var(--secondary-dark);
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border-radius: 10px;
 }
